@@ -3224,7 +3224,7 @@ cerberus: otapackage
 	@echo -e ${CL_RED}"(_______/(_______/|/   \__/|/ \___/ (_______/|/   \__/(_______)\_______)"${CL_RED}
 	@echo -e ${CL_RED}"                           CerberusOS Team "${CL_RED}
 	@echo -e ${CL_RED}"                                Project      "${CL_RED}
-	@echo -e "Package complete: $(`)"
+	@echo -e "Package complete: $(CERBERUS_TARGET_PACKAGE)"
 
 endif    # build_ota_package
 
