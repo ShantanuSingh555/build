@@ -3210,20 +3210,6 @@ CERBERUS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CERBERUS_VERSION).zip
 .PHONY: otapackage cerberus
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 cerberus: otapackage
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CERBERUS_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(CERBERUS_TARGET_PACKAGE) > $(CERBERUS_TARGET_PACKAGE).md5sum
-	@echo -e ${CL_RED}""${CL_RED}
-	@echo -e ${CL_RED}""${CL_RED}
-	@echo -e ${CL_RED}" _______  _______  _______  ______   _______  _______           _______ "${CL_RED}
-	@echo -e ${CL_RED}"(  ____ \(  ____ \(  ____ )(  ___ \ (  ____ \(  ____ )|\     /|(  ____ \"${CL_RED}
-	@echo -e ${CL_RED}"| (    \/| (    \/| (    )|| (   ) )| (    \/| (    )|| )   ( || (    \/"${CL_RED}
-	@echo -e ${CL_RED}"| |      | (__    | (____)|| (__/ / | (__    | (____)|| |   | || (_____ "${CL_RED}
-	@echo -e ${CL_RED}"| |      |  __)   |     __)|  __ (  |  __)   |     __)| |   | |(_____  )"${CL_RED}
-	@echo -e ${CL_RED}"| |      | (      | (\ (   | (  \ \ | (      | (\ (   | |   | |      ) |"${CL_RED}
-	@echo -e ${CL_RED}"| (____/\| (____/\| ) \ \__| )___) )| (____/\| ) \ \__| (___) |/\____) |"${CL_RED}
-	@echo -e ${CL_RED}"(_______/(_______/|/   \__/|/ \___/ (_______/|/   \__/(_______)\_______)"${CL_RED}
-	@echo -e ${CL_RED}"                           CerberusOS Team "${CL_RED}
-	@echo -e ${CL_RED}"                                Project      "${CL_RED}
 	@echo -e "Package complete: $(CERBERUS_TARGET_PACKAGE)"
 
 endif    # build_ota_package
