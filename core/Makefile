@@ -3210,6 +3210,9 @@ CERBERUS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CERBERUS_VERSION).zip
 .PHONY: otapackage cerberus
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 cerberus: otapackage
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CERBERUS_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(CERBERUS_TARGET_PACKAGE) > $(CERBERUS_TARGET_PACKAGE).md5sum
+	echo -e ${CL_BLUE}""${CL_BLUE}
 	@echo -e "Package complete: $(CERBERUS_TARGET_PACKAGE)"
 
 endif    # build_ota_package
