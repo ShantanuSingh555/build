@@ -61,6 +61,14 @@ if [ -n "$BUILD_THUMBPRINT" ] ; then
 fi
 echo "ro.build.characteristics=$TARGET_AAPT_CHARACTERISTICS"
 
-echo "ro.cerberus.device=$CERBERUS_DEVICE"
+echo "ro.cerberus.device=$cerberus_DEVICE"
 
 echo "# end build properties"
+
+# CerberusOS Build Info generator
+cat >> $OUT/$PRODUCT_NAME.cbi << EOF
+CerberusOS P $PRODUCT_NAME
+DEVICE=$PRODUCT_NAME
+MAINTAINER=$USER
+FULL_DEVICE_NAME=$PRODUCT_BRAND $PRODUCT_MODEL
+EOF
