@@ -3213,14 +3213,19 @@ cerberus: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CERBERUS_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(CERBERUS_TARGET_PACKAGE) > $(CERBERUS_TARGET_PACKAGE).md5sum
 	echo -e ${CL_BLUE}""${CL_BLUE}
-	echo -e ${CL_RED}"######################################"${CL_RED}
-	echo -e ${CL_RED}"  ░▄███▄░░▄███▄░░▄███▄░████▄░░▄███▄░  "${CL_RED}
-	echo -e ${CL_RED}"  ██▀░▀▀░██▀░▀██░▀█▄▀▀░██░██░██▀░▀██  "${CL_RED}
-	echo -e ${CL_RED}"  ██▄░▄▄░██▄░▄██░▄▄▀█▄░████▀░███████  "${CL_RED}
-	echo -e ${CL_RED}"  ░▀███▀░░▀███▀░░▀███▀░██░░░░██░░░██  "${CL_RED}
-	echo -e ${CL_RED}"######################################"${CL_RED}
-	echo -e ${CL_RED}"               CERBERUS OS            "${CL_RED}
-	echo -e ${CL_RED}"######################################"${CL_RED}
+	echo -e ${CL_RED"######################################################################"${CL_RED}
+	echo -e ${CL_RED"######################################################################"${CL_RED}
+	echo -e ${CL_RED"          ░▄███▄░████░████▄░█████▄░████░████▄░██░░██░▄███▄            "${CL_RED}
+	echo -e ${CL_RED"          ██▀░▀▀░██▄░░██░██░██▄▄█▀░██▄░░██░██░██░░██░▀█▄▀▀            "${CL_RED}
+	echo -e ${CL_RED"          ██▄░▄▄░██▀░░████▀░██░░██░██▀░░████▀░██░░██░▄▄▀█▄            "${CL_RED}
+	echo -e ${CL_RED"          ░▀███▀░████░██░██░█████▀░████░██░██░▀████▀░▀███▀            "${CL_RED}
+	echo -e ${CL_RED"                                                                      "${CL_RED}
+	echo -e ${CL_RED"                           ░▄███▄░░▄███▄                              "${CL_RED}
+	echo -e ${CL_RED"                           ██▀░▀██░▀█▄▀▀                              "${CL_RED}
+	echo -e ${CL_RED"                           ██▄░▄██░▄▄▀█▄                              "${CL_RED}
+	echo -e ${CL_RED"                           ░▀███▀░░▀███▀                              "${CL_RED}
+	echo -e ${CL_RED"######################################################################"${CL_RED}
+	echo -e ${CL_RED"######################################################################"${CL_RED}
 	@echo -e "Package complete: $(CERBERUS_TARGET_PACKAGE)"
 
 endif    # build_ota_package
